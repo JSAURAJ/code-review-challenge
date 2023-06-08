@@ -1,5 +1,6 @@
 package com.idealista.infrastructure.api;
 
+import java.util.Date;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -11,7 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class QualityAd {
+public class IrrelevantAd {
 
     private Integer id;
     private String typology;
@@ -19,4 +20,6 @@ public class QualityAd {
     private List<String> pictureUrls;
     private Integer houseSize;
     private Integer gardenSize;
+    private Integer score;
+    private Date irrelevantSince;
 }

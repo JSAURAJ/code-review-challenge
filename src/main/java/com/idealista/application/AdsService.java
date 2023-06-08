@@ -1,13 +1,16 @@
 package com.idealista.application;
 
-import com.idealista.infrastructure.api.PublicAd;
-import com.idealista.infrastructure.api.QualityAd;
+/*
+ * TODO JJ Code Review: No es buena praxis acceder a la capa de infraestructura desde la capa de aplicacion. 
+ * Devolvemos el objeto de dominio y mapeamos en la capa de infraestructura.
+ */
+import com.idealista.domain.Ad;
 
 import java.util.List;
 
 public interface AdsService {
 
-    List<PublicAd> findPublicAds();
-    List<QualityAd> findQualityAds();
+    List<Ad> findIrrelevantAds();
+    List<Ad> findQualityAds();
     void calculateScores();
 }
